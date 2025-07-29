@@ -1,2 +1,0 @@
--- Dummy SQL file to help GitHub recognize SQL as main language for this repo.
--- Actual SQL queries are stored externally (see README in this outputs folder)
