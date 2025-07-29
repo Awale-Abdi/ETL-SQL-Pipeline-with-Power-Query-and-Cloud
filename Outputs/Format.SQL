@@ -1,0 +1,1 @@
+-- Placeholder SQL file so Git recognizes SQL as the main language of this project in its overview -- Actual queries are hosted externally (check outputs)
