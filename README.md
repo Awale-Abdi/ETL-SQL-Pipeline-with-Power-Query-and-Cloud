@@ -4,8 +4,6 @@ A full-stack **ETL and SQL analytics pipeline** developed as a **team project** 
 
 Together, we processed over **2 million labor market records** across four quarters of FY2022 to extract **actionable insights** for international students navigating the U.S. job market and H1B sponsorship process.
 
----
-
 ## 🎯 Objective
 
 To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K rows) and extract insights related to:
@@ -13,8 +11,6 @@ To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K 
 - Willful violator impact
 - State-level job application trends
 - High-demand and high-paying occupations
-
----
 
 ## 🧾 Project Scope
 
@@ -36,8 +32,6 @@ To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K 
     - Or a **manual with screenshots**
   - Deliver an executive summary and report addressed to international F1 students using SQL analysis
 
----
-
 ## 📁 Project Structure
 
 - **Datasets** – Unprocessed CSVs
@@ -56,8 +50,6 @@ To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K 
   - Command Prompt Video 2.mp4 – Query demonstration  
   > 🔹 Final outputs are also hosted via AWS S3 for streamlined access and due to Github's file size limits.
 
----
-
 ## 🛠️ Tools Used
 
 - 📊 **Power Query Editor** – for data cleaning and transformation  
@@ -67,8 +59,6 @@ To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K 
 - 📽️ **Command Prompt** – for demonstrating CLI-based data upload to Azure  
 - 📝 **Microsoft Word** – for compiling the executive summary and final project documentation  
 
----
-
 ## 🔐 Access Management
 
 Created and tested remote SQL credentials for instructor access:
@@ -77,8 +67,6 @@ Created and tested remote SQL credentials for instructor access:
 CREATE USER 'prof_luis'@'%' IDENTIFIED BY 'clever_password';
 GRANT SELECT ON h1b.* TO 'prof_luis';
 ```
-
---- 
 
 ### **Contact Me**
 
