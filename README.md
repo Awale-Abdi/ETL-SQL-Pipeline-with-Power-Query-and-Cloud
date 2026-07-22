@@ -1,4 +1,4 @@
-<h1 align="center">H1B Insights Engine | Cloud-Based SQL ETL & Labor Market Analytics (2M+ Records)</h1>
+<h1 align="center">Cloud-Based SQL ETL & Labor Market Analytics (2M+ Records)</h1>
 
 This repository showcases an end-to-end **cloud-based ETL and SQL analytics pipeline** developed as a **team project** during my Master's in Business Analytics. As **project lead**, I designed the relational database schema, provisioned the cloud infrastructure, developed all SQL code, and oversaw the end-to-end analytical workflow. The project processed over **2 million H1B Labor Condition Application (LCA)** records to support labor market analysis and executive reporting.
 
