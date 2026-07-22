@@ -219,24 +219,34 @@ Although centered on H1B labor market data, the workflow and technologies demons
 # 📁 Repository Structure
 
 ```text
-Datasets/
+Cloud-SQL-ETL-Pipeline/
 │
-├── FY2022_Q1.7z
-├── FY2022_Q2.7z
-├── FY2022_Q3.7z
-└── FY2022_Q4.7z
-
-Outputs/
+├── Datasets/
+│   └── README.md
+│       └── Download links to the original FY2022 H1B datasets (.7z)
 │
-├── Final Cleaned Data.zip
-├── Executive Summary.docx
-├── Schema Screenshot.png
-├── Schema.mwb
-├── Command Prompt Video 1.mp4
-└── Command Prompt Video 2.mp4
-
-README.md
+├── Outputs/
+│   └── README.md
+│       └── Download links to cleaned datasets, schema files,
+│           executive report, and demonstration videos
+│
+└── README.md
+    └── Project documentation
 ```
+
+**Datasets**
+
+Contains download links to the original quarterly FY2022 H1B Labor Condition Application datasets hosted on AWS S3.
+
+**Outputs**
+
+Contains download links to the project's final deliverables, including:
+
+- Cleaned datasets
+- Executive report
+- MySQL schema files
+- Schema diagram
+- Command-line demonstration videos
 
 # 🚀 Replicating the Project
 
