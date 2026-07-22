@@ -25,7 +25,7 @@ The primary objectives were to:
 
 # 🏗️ Solution Architecture
 
-## Workflow
+### Workflow
 
 ```text
 Raw H1B Labor Certification Data (4 CSV Files)
