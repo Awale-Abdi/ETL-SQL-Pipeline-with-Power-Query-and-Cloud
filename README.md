@@ -1,79 +1,305 @@
-<h1 align="center">H1B Insights Engine: Cloud-Based SQL ETL & Labor Market Analytics (2M+ Records)</h1>
+<h1 align="center">H1B Insights Engine | Cloud-Based SQL ETL & Labor Market Analytics (2M+ Records)</h1>
 
-A full-stack **ETL and SQL analytics pipeline** developed as a **team project** during my Master’s in Business Analytics. I served as the **project lead** and was responsible for **all SQL coding**, including schema design and cloud setup. The project was built using **Power Query Editor**, **MySQL Workbench**, and a **cloud-hosted Azure MySQL database**. It involved designing a normalized schema, cleaning and loading multi-million row datasets using Power Query Editor, conducting SQL-based labor market analysis, and provisioning stakeholder access via a to the point report.
+This repository showcases an end-to-end **cloud-based ETL and SQL analytics pipeline** developed as a **team project** during my Master's in Business Analytics. As **project lead**, I designed the relational database schema, provisioned the cloud infrastructure, developed all SQL code, and oversaw the end-to-end analytical workflow. The project processed over **2 million H1B Labor Condition Application (LCA)** records to support labor market analysis and executive reporting.
 
-Together, we processed over **2 million labor market records** across four quarters of FY2022 to extract **actionable insights** for international students navigating the U.S. job market and H1B sponsorship process.
+Although the project uses **U.S. H1B labor certification data** as its case study, the techniques demonstrated such as **ETL development, relational database design, SQL analytics, cloud database deployment, data modeling, and executive reporting** are broadly transferable across business intelligence, data engineering, analytics, finance, healthcare, operations, and other data-driven domains.
 
-## 🎯 Objective
+Using **Power Query Editor**, **MySQL Workbench**, and a **cloud-hosted Azure MySQL database**, the project transformed four large raw datasets into a normalized relational database capable of supporting scalable SQL analysis and efficient querying.
 
-To clean, normalize, upload, and analyze high-volume labor data (4 CSVs x ~500K rows) and extract insights related to:
-- Prevailing wages
-- Willful violator impact
-- State-level job application trends
-- High-demand and high-paying occupations
+The project concludes with an executive report summarizing labor market trends affecting international students pursuing H1B sponsorship while demonstrating the ability to communicate complex analytical findings to non-technical stakeholders.
 
-## 🧾 Project Scope
+# 🎯 Project Goals
 
-- **Raw Data**: 4 CSV files with ~500,000 rows and 90+ columns each  
-  - LCA_Disclosure_Data_FY2022_Q1.csv  
-  - LCA_Disclosure_Data_FY2022_Q2.csv  
-  - LCA_Disclosure_Data_FY2022_Q3.csv  
-  - LCA_Disclosure_Data_FY2022_Q4.csv  
+The project was designed to build a scalable cloud-based ETL pipeline capable of transforming large public labor-market datasets into a normalized relational database for SQL analytics.
 
-- **Requirements**:
-  - Upload all data to a **cloud-hosted SQL server (Azure MySQL)**
-  - Perform data transformation using either:
-    - `INSERT/UPDATE/DELETE` SQL commands  
-    - Or Power Query Editor connected to a local SQL database
-  - Build a normalized schema from scratch in **MySQL Workbench**
-  - Create a **read-only user** for the professor to verify cloud database access
-  - Submit either:
-    - A **60 to 90 second video** showing command-line data upload
-    - Or a **manual with screenshots**
-  - Deliver an executive summary and report addressed to international F1 students using SQL analysis
+The primary objectives were to:
 
-## 📁 Project Structure
+- Design and implement a normalized relational database schema.
+- Build an end-to-end ETL pipeline for over **2 million** records.
+- Clean and transform large raw datasets using Power Query Editor.
+- Deploy the database to a cloud-hosted Azure MySQL server.
+- Perform SQL-based labor market analyses.
+- Provision secure read-only database access for stakeholders.
+- Produce an executive report communicating key labor market insights.
+- Demonstrate scalable database engineering and analytical workflows.
 
-- **Datasets** – Unprocessed CSVs
-  - LCA_Disclosure_Data_FY2022_Q1.csv  
-  - LCA_Disclosure_Data_FY2022_Q2.csv  
-  - LCA_Disclosure_Data_FY2022_Q3.csv  
-  - LCA_Disclosure_Data_FY2022_Q4.csv  
-  > 🔹 These files are compressed into `.7z` format and hosted on AWS S3 due to GitHub’s file size limits.
+# 🏗️ Solution Architecture
 
-- **Outputs** – Cleaned datasets, documentation, schema files, and demo videos  
-  - Final Cleaned Data.zip – Cleaned Excel files ready for SQL upload  
-  - Executive Summary.docx – Final report with labor market insights  
-  - Schema Screenshot.png – MySQL ERD diagram  
-  - Schema.mwb – MySQL Workbench schema project file  
-  - Command Prompt Video 1.mp4 – Upload demonstration  
-  - Command Prompt Video 2.mp4 – Query demonstration  
-  > 🔹 Final outputs are also hosted via AWS S3 for streamlined access and due to Github's file size limits.
+## Workflow
 
-## 🛠️ Tools Used
-
-- 📊 **Power Query Editor** – for data cleaning and transformation  
-- 🧩 **MySQL Workbench** – for schema design, SQL querying, and user management  
-- ☁️ **Azure MySQL** – for cloud-based SQL deployment and database provisioning  
-- ☁️ **AWS S3** – for hosting large raw and final datasets externally and linking them to GitHub  
-- 📽️ **Command Prompt** – for demonstrating CLI-based data upload to Azure  
-- 📝 **Microsoft Word** – for compiling the executive summary and final project documentation  
-
-## 🔐 Access Management
-
-Created and tested remote SQL credentials for instructor access:
-
-```sql
-CREATE USER 'prof_luis'@'%' IDENTIFIED BY 'clever_password';
-GRANT SELECT ON h1b.* TO 'prof_luis';
+```text
+Raw H1B Labor Certification Data (4 CSV Files)
+                    ↓
+Data Cleaning & Transformation
+                    ↓
+Power Query ETL
+                    ↓
+Normalized Relational Schema Design
+                    ↓
+Azure MySQL Cloud Deployment
+                    ↓
+Bulk Data Loading
+                    ↓
+SQL Query Development
+                    ↓
+Labor Market Analytics
+                    ↓
+Executive Reporting
 ```
 
-### **Contact Me**
+### Data
 
-For questions or collaboration, reach out via:
+- **Primary Dataset:** H1B Labor Condition Application (LCA) Disclosure Data (FY2022)
+- **Source:** U.S. Department of Labor
+- **Volume:** 4 quarterly CSV files containing over **2 million** records
+- **Focus:** H1B applications, prevailing wages, occupations, employers, industries, and geographic trends
 
-- Awaleiabdi@outlook.com
+### Data Preparation
 
-- [LinkedIn](https://www.linkedin.com/in/awale-abdi/)
+Prepared the datasets for relational database storage by:
 
-  
+- Cleaning inconsistent values.
+- Removing unnecessary attributes.
+- Standardizing data types.
+- Preparing records for bulk SQL import.
+- Structuring reproducible ETL workflows across all quarterly datasets.
+
+### ETL Pipeline
+
+Developed a cloud-based ETL pipeline that:
+
+- Imported four large CSV datasets.
+- Performed transformations using Power Query Editor.
+- Loaded cleaned data into Azure MySQL.
+- Automated repeatable data preparation workflows.
+- Produced normalized tables for downstream SQL analysis.
+
+### Relational Database Design
+
+Designed a normalized relational schema using **MySQL Workbench**, including:
+
+- Entity identification.
+- Primary and foreign key relationships.
+- Normalized table structures.
+- Referential integrity.
+- Cloud-ready database deployment.
+
+### Cloud Database Deployment
+
+Provisioned and configured an **Azure MySQL** database to:
+
+- Host the production database.
+- Support remote SQL access.
+- Enable secure stakeholder connectivity.
+- Demonstrate cloud database administration.
+
+### SQL Analytics
+
+Developed SQL queries to analyze:
+
+- Prevailing wages.
+- Occupation demand.
+- State-level application trends.
+- Employer hiring activity.
+- Industry sponsorship patterns.
+- Willful violator impacts.
+
+### Executive Reporting
+
+Communicated analytical findings through a concise executive report summarizing key labor market trends relevant to international students pursuing H1B sponsorship.
+
+# 📊 Analytical Insights
+
+SQL analysis of over **2 million H1B labor certification records** identified several notable labor market trends across occupations, employers, industries, wages, and geographic regions.
+
+### Prevailing Wage Trends
+
+- Significant wage variation exists across occupations and industries.
+- Specialized technical roles consistently command higher prevailing wages.
+- Wage levels differ considerably between states and metropolitan areas.
+
+### Occupation Demand
+
+- Software and technology-related occupations account for a substantial share of H1B applications.
+- Engineering, data, healthcare, and business roles also demonstrate strong demand.
+- Sponsorship activity is concentrated among highly skilled occupations.
+
+### Geographic Distribution
+
+- H1B applications are concentrated in major economic and technology hubs.
+- California, Texas, New York, and Washington account for a significant proportion of certified applications.
+- Geographic patterns closely reflect regional industry specialization.
+
+### Employer Sponsorship
+
+- A relatively small number of employers account for a large share of H1B sponsorships.
+- Large multinational organizations consistently submit the highest application volumes.
+- Sponsorship activity varies considerably across industries.
+
+### Labor Market Compliance
+
+- Willful violator status represents only a small proportion of employers.
+- SQL analysis enables rapid identification and comparison of employer compliance patterns.
+
+# ⚠️ Project Limitations
+
+- Analysis is limited to publicly available FY2022 H1B Labor Condition Application (LCA) data.
+- Labor Condition Applications do not represent final H1B visa approvals.
+- Some employer and occupation names required standardization during data preparation.
+- Findings reflect a single fiscal year and may not capture long-term labor market trends.
+
+# 📈 Analytical Recommendations
+
+Based on the SQL analysis, several recommendations emerge:
+
+- Focus job searches on occupations with consistently high sponsorship demand.
+- Prioritize employers with established H1B sponsorship histories.
+- Consider geographic regions demonstrating sustained hiring activity.
+- Monitor prevailing wage trends when evaluating employment opportunities.
+- Expand future analyses by incorporating multiple fiscal years to identify long-term labor market trends.
+
+# 🛠️ Technical Skills Demonstrated
+
+### Programming & Query Languages
+
+- SQL
+
+### Data Engineering
+
+- ETL Pipeline Development
+- Data Cleaning & Transformation
+- Relational Database Design
+- Data Modeling
+- Database Normalization
+- Bulk Data Import
+- Cloud Database Deployment
+- Database Administration
+
+### Data Analytics
+
+- SQL Query Development
+- Labor Market Analytics
+- Trend Analysis
+- Geographic Analysis
+- Employer Analysis
+- Wage Analysis
+- Executive Reporting
+
+### Cloud & Database Technologies
+
+- Azure MySQL
+- MySQL Server
+- Relational Database Management Systems (RDBMS)
+
+### Software
+
+- Power Query Editor
+- MySQL Workbench
+- Azure Database for MySQL
+- AWS S3
+- Microsoft Word
+- Command Prompt
+
+# 💡 What This Project Demonstrates
+
+This project demonstrates the ability to design, build, and deploy an end-to-end cloud-based data engineering and SQL analytics solution using production-scale datasets.
+
+Key competencies demonstrated include:
+
+- Designing normalized relational databases.
+- Developing scalable ETL workflows.
+- Deploying cloud-hosted SQL databases.
+- Managing large-scale structured datasets.
+- Writing efficient analytical SQL queries.
+- Transforming raw data into actionable business insights.
+- Communicating technical findings through executive reporting.
+
+Although centered on H1B labor market data, the workflow and technologies demonstrated are broadly transferable to business intelligence, data engineering, analytics, finance, healthcare, operations, and other data-driven industries.
+
+# 📁 Repository Structure
+
+```text
+Datasets/
+│
+├── FY2022_Q1.7z
+├── FY2022_Q2.7z
+├── FY2022_Q3.7z
+└── FY2022_Q4.7z
+
+Outputs/
+│
+├── Final Cleaned Data.zip
+├── Executive Summary.docx
+├── Schema Screenshot.png
+├── Schema.mwb
+├── Command Prompt Video 1.mp4
+└── Command Prompt Video 2.mp4
+
+README.md
+```
+
+# 🚀 Replicating the Project
+
+### Prerequisites
+
+- Azure Database for MySQL
+- MySQL Workbench
+- Microsoft Power Query Editor
+- AWS S3 (for large dataset storage)
+- H1B Labor Condition Application (LCA) FY2022 datasets
+
+### Repository Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/h1b-insights-engine.git
+```
+
+### Data Preparation
+
+1. Download the quarterly H1B datasets.
+2. Extract the compressed archives.
+3. Clean and transform the data using Power Query Editor.
+4. Export the cleaned datasets for SQL import.
+
+### Database Deployment
+
+1. Create an Azure MySQL database.
+2. Open the provided schema in MySQL Workbench.
+3. Execute the schema to create the database structure.
+4. Configure user permissions if remote access is required.
+
+### Load the Data
+
+Import the cleaned datasets into Azure MySQL using MySQL Workbench or the MySQL command-line client.
+
+### Run the Analysis
+
+Execute the SQL queries to analyze:
+
+- Prevailing wages
+- Occupation demand
+- Employer sponsorship
+- Geographic trends
+- Labor market compliance
+
+### Review the Outputs
+
+The **Outputs** directory contains:
+
+- Executive report
+- Database schema
+- Demonstration videos
+- Cleaned datasets
+- Supporting documentation
+
+# 📬 Contact Me
+
+For questions or collaboration, feel free to reach out.
+
+**Email**  
+Awaleiabdi@outlook.com
+
+**LinkedIn**  
+https://www.linkedin.com/in/awale-abdi/
