@@ -8,7 +8,7 @@ Using **Power Query Editor**, **MySQL Workbench**, and a **cloud-hosted Azure My
 
 The project concludes with an executive report summarizing labor market trends affecting international students pursuing H1B sponsorship while demonstrating the ability to communicate complex analytical findings to non-technical stakeholders.
 
-# 🎯 Project Goals
+## 🎯 Project Goals
 
 The project was designed to build a scalable cloud-based ETL pipeline capable of transforming large public labor-market datasets into a normalized relational database for SQL analytics.
 
@@ -23,7 +23,7 @@ The primary objectives were to:
 - Produce an executive report communicating key labor market insights.
 - Demonstrate scalable database engineering and analytical workflows.
 
-# 🏗️ Solution Architecture
+## 🏗️ Solution Architecture
 
 ### Workflow
 
@@ -108,7 +108,7 @@ Developed SQL queries to analyze:
 
 Communicated analytical findings through a concise executive report summarizing key labor market trends relevant to international students pursuing H1B sponsorship.
 
-# 📊 Analytical Insights
+## 📊 Analytical Insights
 
 SQL analysis of over **2 million H1B labor certification records** identified several notable labor market trends across occupations, employers, industries, wages, and geographic regions.
 
@@ -141,14 +141,14 @@ SQL analysis of over **2 million H1B labor certification records** identified se
 - Willful violator status represents only a small proportion of employers.
 - SQL analysis enables rapid identification and comparison of employer compliance patterns.
 
-# ⚠️ Project Limitations
+## ⚠️ Project Limitations
 
 - Analysis is limited to publicly available FY2022 H1B Labor Condition Application (LCA) data.
 - Labor Condition Applications do not represent final H1B visa approvals.
 - Some employer and occupation names required standardization during data preparation.
 - Findings reflect a single fiscal year and may not capture long-term labor market trends.
 
-# 📈 Analytical Recommendations
+## 📈 Analytical Recommendations
 
 Based on the SQL analysis, several recommendations emerge:
 
@@ -158,7 +158,7 @@ Based on the SQL analysis, several recommendations emerge:
 - Monitor prevailing wage trends when evaluating employment opportunities.
 - Expand future analyses by incorporating multiple fiscal years to identify long-term labor market trends.
 
-# 🛠️ Technical Skills Demonstrated
+## 🛠️ Technical Skills Demonstrated
 
 ### Programming & Query Languages
 
@@ -200,7 +200,7 @@ Based on the SQL analysis, several recommendations emerge:
 - Microsoft Word
 - Command Prompt
 
-# 💡 What This Project Demonstrates
+## 💡 What This Project Demonstrates
 
 This project demonstrates the ability to design, build, and deploy an end-to-end cloud-based data engineering and SQL analytics solution using production-scale datasets.
 
@@ -216,7 +216,7 @@ Key competencies demonstrated include:
 
 Although centered on H1B labor market data, the workflow and technologies demonstrated are broadly transferable to business intelligence, data engineering, analytics, finance, healthcare, operations, and other data-driven industries.
 
-# 📁 Repository Structure
+## 📁 Repository Structure
 
 ```text
 Cloud-SQL-ETL-Pipeline/
@@ -248,7 +248,7 @@ Contains download links to the project's final deliverables, including:
 - Schema diagram
 - Command-line demonstration videos
 
-# 🚀 Replicating the Project
+## 🚀 Replicating the Project
 
 ### Prerequisites
 
@@ -304,7 +304,7 @@ The **Outputs** directory contains:
 - Cleaned datasets
 - Supporting documentation
 
-# 📬 Contact Me
+## 📬 Contact Me
 
 For questions or collaboration, feel free to reach out.
 
