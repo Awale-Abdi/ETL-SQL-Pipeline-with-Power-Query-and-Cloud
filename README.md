@@ -25,7 +25,7 @@ The primary objectives were to:
 
 ## 🏗️ Solution Architecture
 
-### Workflow
+#### Workflow
 
 ```text
 Raw H1B Labor Certification Data (4 CSV Files)
@@ -47,14 +47,14 @@ Labor Market Analytics
 Executive Reporting
 ```
 
-### Data
+#### Data
 
 - **Primary Dataset:** H1B Labor Condition Application (LCA) Disclosure Data (FY2022)
 - **Source:** U.S. Department of Labor
 - **Volume:** 4 quarterly CSV files containing over **2 million** records
 - **Focus:** H1B applications, prevailing wages, occupations, employers, industries, and geographic trends
 
-### Data Preparation
+#### Data Preparation
 
 Prepared the datasets for relational database storage by:
 
@@ -64,7 +64,7 @@ Prepared the datasets for relational database storage by:
 - Preparing records for bulk SQL import.
 - Structuring reproducible ETL workflows across all quarterly datasets.
 
-### ETL Pipeline
+#### ETL Pipeline
 
 Developed a cloud-based ETL pipeline that:
 
@@ -74,7 +74,7 @@ Developed a cloud-based ETL pipeline that:
 - Automated repeatable data preparation workflows.
 - Produced normalized tables for downstream SQL analysis.
 
-### Relational Database Design
+#### Relational Database Design
 
 Designed a normalized relational schema using **MySQL Workbench**, including:
 
@@ -84,7 +84,7 @@ Designed a normalized relational schema using **MySQL Workbench**, including:
 - Referential integrity.
 - Cloud-ready database deployment.
 
-### Cloud Database Deployment
+#### Cloud Database Deployment
 
 Provisioned and configured an **Azure MySQL** database to:
 
@@ -93,7 +93,7 @@ Provisioned and configured an **Azure MySQL** database to:
 - Enable secure stakeholder connectivity.
 - Demonstrate cloud database administration.
 
-### SQL Analytics
+#### SQL Analytics
 
 Developed SQL queries to analyze:
 
@@ -104,7 +104,7 @@ Developed SQL queries to analyze:
 - Industry sponsorship patterns.
 - Willful violator impacts.
 
-### Executive Reporting
+#### Executive Reporting
 
 Communicated analytical findings through a concise executive report summarizing key labor market trends relevant to international students pursuing H1B sponsorship.
 
@@ -112,31 +112,31 @@ Communicated analytical findings through a concise executive report summarizing 
 
 SQL analysis of over **2 million H1B labor certification records** identified several notable labor market trends across occupations, employers, industries, wages, and geographic regions.
 
-### Prevailing Wage Trends
+#### Prevailing Wage Trends
 
 - Significant wage variation exists across occupations and industries.
 - Specialized technical roles consistently command higher prevailing wages.
 - Wage levels differ considerably between states and metropolitan areas.
 
-### Occupation Demand
+#### Occupation Demand
 
 - Software and technology-related occupations account for a substantial share of H1B applications.
 - Engineering, data, healthcare, and business roles also demonstrate strong demand.
 - Sponsorship activity is concentrated among highly skilled occupations.
 
-### Geographic Distribution
+#### Geographic Distribution
 
 - H1B applications are concentrated in major economic and technology hubs.
 - California, Texas, New York, and Washington account for a significant proportion of certified applications.
 - Geographic patterns closely reflect regional industry specialization.
 
-### Employer Sponsorship
+#### Employer Sponsorship
 
 - A relatively small number of employers account for a large share of H1B sponsorships.
 - Large multinational organizations consistently submit the highest application volumes.
 - Sponsorship activity varies considerably across industries.
 
-### Labor Market Compliance
+#### Labor Market Compliance
 
 - Willful violator status represents only a small proportion of employers.
 - SQL analysis enables rapid identification and comparison of employer compliance patterns.
@@ -160,11 +160,11 @@ Based on the SQL analysis, several recommendations emerge:
 
 ## 🛠️ Technical Skills Demonstrated
 
-### Programming & Query Languages
+#### Programming & Query Languages
 
 - SQL
 
-### Data Engineering
+#### Data Engineering
 
 - ETL Pipeline Development
 - Data Cleaning & Transformation
@@ -175,7 +175,7 @@ Based on the SQL analysis, several recommendations emerge:
 - Cloud Database Deployment
 - Database Administration
 
-### Data Analytics
+#### Data Analytics
 
 - SQL Query Development
 - Labor Market Analytics
@@ -185,13 +185,13 @@ Based on the SQL analysis, several recommendations emerge:
 - Wage Analysis
 - Executive Reporting
 
-### Cloud & Database Technologies
+#### Cloud & Database Technologies
 
 - Azure MySQL
 - MySQL Server
 - Relational Database Management Systems (RDBMS)
 
-### Software
+#### Software
 
 - Power Query Editor
 - MySQL Workbench
@@ -250,7 +250,7 @@ Contains download links to the project's final deliverables, including:
 
 ## 🚀 Replicating the Project
 
-### Prerequisites
+#### Prerequisites
 
 - Azure Database for MySQL
 - MySQL Workbench
@@ -258,7 +258,7 @@ Contains download links to the project's final deliverables, including:
 - AWS S3 (for large dataset storage)
 - H1B Labor Condition Application (LCA) FY2022 datasets
 
-### Repository Setup
+#### Repository Setup
 
 Clone the repository:
 
@@ -266,25 +266,25 @@ Clone the repository:
 git clone https://github.com/yourusername/h1b-insights-engine.git
 ```
 
-### Data Preparation
+#### Data Preparation
 
 1. Download the quarterly H1B datasets.
 2. Extract the compressed archives.
 3. Clean and transform the data using Power Query Editor.
 4. Export the cleaned datasets for SQL import.
 
-### Database Deployment
+#### Database Deployment
 
 1. Create an Azure MySQL database.
 2. Open the provided schema in MySQL Workbench.
 3. Execute the schema to create the database structure.
 4. Configure user permissions if remote access is required.
 
-### Load the Data
+#### Load the Data
 
 Import the cleaned datasets into Azure MySQL using MySQL Workbench or the MySQL command-line client.
 
-### Run the Analysis
+#### Run the Analysis
 
 Execute the SQL queries to analyze:
 
@@ -294,7 +294,7 @@ Execute the SQL queries to analyze:
 - Geographic trends
 - Labor market compliance
 
-### Review the Outputs
+#### Review the Outputs
 
 The **Outputs** directory contains:
 
