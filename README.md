@@ -2,7 +2,7 @@
 
 This repository showcases an end-to-end **cloud-based ETL and SQL analytics pipeline** developed as a **team project** during my Master's in Business Analytics. As **project lead**, I designed the relational database schema, provisioned the cloud infrastructure, developed all SQL code, and oversaw the end-to-end analytical workflow. The project processed over **2 million H1B Labor Condition Application (LCA)** records to support labor market analysis and executive reporting.
 
-Although the project uses **U.S. H1B labor certification data** as its case study, the techniques demonstrated such as **ETL development, relational database design, SQL analytics, cloud database deployment, data modeling, and executive reporting** are broadly transferable across business intelligence, data engineering, analytics, finance, healthcare, operations, and other data-driven domains.
+Although the project uses U.S. H1B labor certification data as its case study, the techniques demonstrated such as ETL development, relational database design, SQL analytics, cloud database deployment, data modeling, and executive reporting are broadly transferable across business intelligence, data engineering, finance, operations, supply chain, marketing, retail, healthcare, insurance, manufacturing, consulting, human resources, workforce analytics, and other data-driven domains.
 
 Using **Power Query Editor**, **MySQL Workbench**, and a **cloud-hosted Azure MySQL database**, the project transformed four large raw datasets into a normalized relational database capable of supporting scalable SQL analysis and efficient querying.
 
@@ -110,53 +110,65 @@ Communicated analytical findings through a concise executive report summarizing 
 
 ## 📊 Analytical Insights
 
-SQL analysis of over **2 million H1B labor certification records** identified several notable labor market trends across occupations, employers, industries, wages, and geographic regions.
+SQL analysis of over **2 million H1B labor certification records** identified several notable labor market patterns across wages, occupations, employers, geographic regions, and employer compliance.
 
 #### Prevailing Wage Trends
 
-- Significant wage variation exists across occupations and industries.
-- Specialized technical roles consistently command higher prevailing wages.
-- Wage levels differ considerably between states and metropolitan areas.
+- The average prevailing wage across the analyzed applications was approximately **$75,816**.
+- Prevailing wages varied substantially across occupations, industries, and geographic regions.
+- Specialized occupations, particularly certain medical roles, ranked among the highest-paying positions in the dataset.
+- Compensation therefore represents an important additional dimension when comparing sponsorship opportunities across occupations.
 
 #### Occupation Demand
 
-- Software and technology-related occupations account for a substantial share of H1B applications.
-- Engineering, data, healthcare, and business roles also demonstrate strong demand.
-- Sponsorship activity is concentrated among highly skilled occupations.
+- Software development represented one of the strongest areas of H1B sponsorship activity.
+- Mechanical engineering and medical and clinical laboratory occupations also demonstrated substantial application volumes.
+- Sponsorship activity was concentrated among highly skilled and specialized occupations.
+- Several highly compensated medical specialties, including radiology, critical care, obstetrics, breast surgery, and vascular surgery, appeared among the highest-paying occupations analyzed.
 
 #### Geographic Distribution
 
-- H1B applications are concentrated in major economic and technology hubs.
-- California, Texas, New York, and Washington account for a significant proportion of certified applications.
-- Geographic patterns closely reflect regional industry specialization.
+- H1B sponsorship activity was concentrated in several major labor markets.
+- **California, New York, New Jersey, Texas, and Pennsylvania** recorded particularly high application volumes.
+- These concentrations indicate substantial employer demand for H1B-sponsored labor within those states.
+- Geographic analysis demonstrated that sponsorship opportunities are distributed unevenly across the United States.
 
-#### Employer Sponsorship
+#### Employer Sponsorship & Compliance
 
-- A relatively small number of employers account for a large share of H1B sponsorships.
-- Large multinational organizations consistently submit the highest application volumes.
-- Sponsorship activity varies considerably across industries.
+- Employer sponsorship patterns varied substantially across the analyzed records.
+- Employers classified as **willful violators** exhibited markedly different application and rejection patterns from non-willful violators in the project analysis.
+- Willful violators required more than **10 times as many applications** relative to the comparison described in the executive analysis.
+- Employer compliance history therefore emerged as an important consideration alongside occupation, geography, and compensation.
 
-#### Labor Market Compliance
+#### Labor Market Decision Support
 
-- Willful violator status represents only a small proportion of employers.
-- SQL analysis enables rapid identification and comparison of employer compliance patterns.
+- No single variable provides a complete picture of the H1B labor market.
+- Combining **prevailing wages, occupation demand, geographic concentration, employer sponsorship activity, and compliance information** provides a stronger framework for evaluating employment opportunities.
+- The analysis demonstrates how large-scale administrative data can be transformed into practical decision-support insights through relational databases and SQL analytics.
 
 ## ⚠️ Project Limitations
 
-- Analysis is limited to publicly available FY2022 H1B Labor Condition Application (LCA) data.
-- Labor Condition Applications do not represent final H1B visa approvals.
+- The analysis is limited to publicly available **FY2022 H1B Labor Condition Application (LCA)** data.
+- Labor Condition Applications represent employer filings and **do not represent final H1B visa approvals**.
+- High application volume indicates sponsorship activity and labor demand but should not be interpreted as a higher probability of receiving an H1B visa.
 - Some employer and occupation names required standardization during data preparation.
-- Findings reflect a single fiscal year and may not capture long-term labor market trends.
+- Findings reflect a single fiscal year and may not capture longer-term changes in wages, occupations, employer behavior, or geographic demand.
+- The analysis does not incorporate subsequent H1B petition, lottery, adjudication, or final visa outcome data.
+- Observed relationships should therefore be interpreted as **labor-market and sponsorship patterns rather than causal determinants of H1B approval**.
 
 ## 📈 Analytical Recommendations
 
-Based on the SQL analysis, several recommendations emerge:
+Based on the SQL analysis, several recommendations emerge for international students and other professionals evaluating H1B sponsorship opportunities:
 
-- Focus job searches on occupations with consistently high sponsorship demand.
-- Prioritize employers with established H1B sponsorship histories.
-- Consider geographic regions demonstrating sustained hiring activity.
-- Monitor prevailing wage trends when evaluating employment opportunities.
-- Expand future analyses by incorporating multiple fiscal years to identify long-term labor market trends.
+- Target roles with compensation at or above prevailing wage requirements, using approximately **$75,816** as the average prevailing wage observed within the analyzed dataset.
+- Prioritize occupations demonstrating high levels of H1B sponsorship activity, particularly software development, engineering, and specialized healthcare roles.
+- Consider major sponsorship markets such as **California, New York, New Jersey, Texas, and Pennsylvania**, where application volumes indicate substantial demand for H1B-sponsored labor.
+- Evaluate employers' H1B sponsorship histories when identifying prospective employment opportunities.
+- Review employer compliance status and exercise additional caution when considering organizations classified as **willful violators**.
+- Compare both sponsorship activity and compensation when evaluating occupations, since the highest-volume occupations are not necessarily the highest-paying.
+- Consider highly compensated specialized occupations where relevant to an individual's qualifications and career path.
+- Monitor prevailing wages, geographic demand, occupation trends, and employer sponsorship patterns together rather than evaluating any single factor in isolation.
+- Expand future analyses across multiple fiscal years and incorporate H1B petition and approval data to distinguish labor-market demand from actual visa outcomes.
 
 ## 🛠️ Technical Skills Demonstrated
 
@@ -255,30 +267,39 @@ Contains download links to the project's final deliverables, including:
 - Azure Database for MySQL
 - MySQL Workbench
 - Microsoft Power Query Editor
-- AWS S3 (for large dataset storage)
-- H1B Labor Condition Application (LCA) FY2022 datasets
+- MySQL command-line client (optional)
 
-#### Repository Setup
+#### Access the Project Files
 
-Clone the repository:
+Open the repository's:
 
-```bash
-git clone https://github.com/yourusername/h1b-insights-engine.git
+```text
+Datasets/
 ```
+
+directory and use the provided AWS S3 links to download the four original FY2022 H1B datasets.
+
+Then open:
+
+```text
+Outputs/
+```
+
+to access the cleaned datasets, schema files, executive report, and demonstration videos.
 
 #### Data Preparation
 
-1. Download the quarterly H1B datasets.
-2. Extract the compressed archives.
-3. Clean and transform the data using Power Query Editor.
+1. Extract the quarterly H1B dataset archives.
+2. Clean and transform the data using Power Query Editor.
+3. Standardize data types and required fields.
 4. Export the cleaned datasets for SQL import.
 
 #### Database Deployment
 
-1. Create an Azure MySQL database.
-2. Open the provided schema in MySQL Workbench.
-3. Execute the schema to create the database structure.
-4. Configure user permissions if remote access is required.
+1. Create an Azure Database for MySQL instance.
+2. Open the provided schema file in MySQL Workbench.
+3. Execute the schema to recreate the relational database structure.
+4. Configure user permissions if remote stakeholder access is required.
 
 #### Load the Data
 
@@ -286,23 +307,29 @@ Import the cleaned datasets into Azure MySQL using MySQL Workbench or the MySQL 
 
 #### Run the Analysis
 
-Execute the SQL queries to analyze:
+Execute the SQL queries to reproduce analyses of:
 
 - Prevailing wages
 - Occupation demand
-- Employer sponsorship
+- Employer sponsorship activity
 - Geographic trends
 - Labor market compliance
 
-#### Review the Outputs
+#### Review the Results
 
-The **Outputs** directory contains:
+Compare the reproduced database and analyses with the materials available in:
+
+```text
+Outputs/
+```
+
+including the:
 
 - Executive report
 - Database schema
-- Demonstration videos
+- Schema diagram
 - Cleaned datasets
-- Supporting documentation
+- Demonstration videos
 
 ## 📬 Contact Me
 
