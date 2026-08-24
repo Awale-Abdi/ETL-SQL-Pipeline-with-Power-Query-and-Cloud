@@ -226,7 +226,7 @@ Key competencies demonstrated include:
 - Transforming raw data into actionable business insights.
 - Communicating technical findings through executive reporting.
 
-Although centered on H1B labor market data, the workflow and technologies demonstrated are broadly transferable to business intelligence, data engineering, analytics, finance, healthcare, operations, and other data-driven industries.
+As stated prior, while the project was centered on H1B labor market data, the workflow and technologies demonstrated are broadly transferable to across business intelligence, data engineering, finance, operations, supply chain, marketing, retail, healthcare, insurance, manufacturing, consulting, human resources, workforce analytics, and other data-driven domains.
 
 ## 📁 Repository Structure
 
